@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechFest 2025</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      z-index: 999;
+    }
+
+    nav.scrolled {
+      background-color: #333;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #fff;
+      color: #333;
+      border-radius: 4px;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, #ff11cb, #2575fc);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 80px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .content {
+      padding: 80px 40px;
+    }
+
+    .section {
+      margin-bottom: 100px;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo">TechFest 2025</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Events</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Register</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>Welcome to TechFest 2025</h1>
+    <p>Scroll down to explore our exciting lineup of tech events</p>
+  </section>
+
+  <div class="content">
+    <div class="section" id="features">
+      <h2>Featured Events</h2>
+      <p>Join coding marathons, AI workshops, robotics competitions, and more!</p>
+    </div>
+
+    <div class="section" id="about">
+      <h2>About TechFest</h2>
+      <p>TechFest 2025 is the annual technology festival organized by XYZ Institute, bringing together innovators, learners, and tech enthusiasts.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <h2>Register Now</h2>
+      <p>Don't miss out! Secure your spot by registering online. Limited seats available.</p>
+    </div>
+  </div>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+  </html>
